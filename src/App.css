@@ -11,6 +11,7 @@
 }
 .btn{
   border: 1px solid black;
+  margin-left: 25PX;
 }
 .form-control{
   height: 25px;
