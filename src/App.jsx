@@ -38,7 +38,7 @@ function App() {
       <br /><br /><br />
       
       {show ? <h1 className="namee" style={{color:txtColor}}>A.R. ENGINEERINGS</h1>:""}
-      <button className='btn' onClick={handleClick}>SHOW NAME</button> 
+      <button className='btn' onClick={handleClick}>Hide/Show </button> 
       <button className='btn' onClick={handleChangeColor}>Change Color</button> 
     </>
   )
