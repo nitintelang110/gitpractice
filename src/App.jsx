@@ -34,6 +34,7 @@ function App() {
                     value={color.name}
                     onChange={handleColor}
                     className="form-control"
+         placeholder = "Enter Color here..."
                     
       />
       <br /><br /><br />
