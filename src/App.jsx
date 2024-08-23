@@ -27,7 +27,7 @@ function App() {
   }
   return (
     <>
-      <h6>Enter Color<h6/>
+      <h6>Text Color</h6>
        <input
                     type="text"
                     name="name"
