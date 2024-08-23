@@ -1,0 +1,18 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.namee{
+  color: rgb(60, 0, 255);
+  text-decoration: underline;
+}
+.btn{
+  border: 1px solid black;
+}
+.form-control{
+  height: 25px;
+  width: 200px;
+}
