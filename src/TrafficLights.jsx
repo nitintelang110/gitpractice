@@ -35,13 +35,36 @@ const TrafficLights = () => {
         style={{
           width: '300px',
           height: '300px',
-          backgroundColor: color,
+          backgroundColor: 'red',
           margin: '0 auto',
           borderRadius: '0%',
           textAlign:'center',
+          opacity:color==='red'?1:0.3
         }}
       ></div>
-      <p>{color}</p>
+      <div
+        style={{
+          width: '300px',
+          height: '300px',
+          backgroundColor: 'yellow',
+          margin: '0 auto',
+          borderRadius: '0%',
+          textAlign:'center',
+          opacity:color==='yellow'?1:0.3
+        }}
+      ></div>
+      <div
+        style={{
+          width: '300px',
+          height: '300px',
+          backgroundColor: 'green',
+          margin: '0 auto',
+          borderRadius: '0%',
+          textAlign:'center',
+          opacity:color==='green'?1:0.3
+        }}
+      ></div>
+      
     </div>
   );
 };
