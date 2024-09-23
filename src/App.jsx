@@ -28,7 +28,7 @@ const App = () => {
   }, [color, seconds]);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div style={{ textAlign: 'center', marginTop: '50px',marginLeft:'150px'}}>
       <div
         style={{
           width: '200px',
