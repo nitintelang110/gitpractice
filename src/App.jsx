@@ -1,49 +1,46 @@
-import { useState } from 'react'
-import './App.css'
 
-function App() {
-  
-  const [show, setShow] = useState(true);
-  const [txtColor, setTxtColor] = useState('');
-  const [color, setColor] = useState({
-    name:''
-  })
-  
-  const handleClick = () => {
-    setShow(!show)
-  }
+import React, { useState, useEffect } from 'react';
 
-  const handleColor = (e) => {
-     setColor({
-            ...color,
-            [e.target.name]: e.target.value
-        })
-  }
+const App = () => {
+  const [color, setColor] = useState('red'); // Initial color
+  const [seconds, setSeconds] = useState(10); // Initial time for red
 
- 
-  
-  const handleChangeColor = () => {
-  setTxtColor(color.name)
-  }
+  useEffect(() => {
+    // Define a function to change the color based on the current state
+    const changeColor = () => {
+      if (color === 'red') {
+        setColor('green');
+        setSeconds(5); // Green for 5 seconds
+      } else if (color === 'green') {
+        setColor('yellow');
+        setSeconds(15); // Yellow for 15 seconds
+      } else if (color === 'yellow') {
+        setColor('red');
+        setSeconds(10); // Red for 10 seconds
+      }
+    };
+
+    // Set a timer to change the color after the specified seconds
+    const timer = setTimeout(changeColor, seconds * 1000);
+
+    // Clean up the timer when the component is unmounted or when the color/seconds change
+    return () => clearTimeout(timer);
+  }, [color, seconds]);
+
   return (
-    <>
-      <h6>Text Color</h6>
-       <input
-                    type="text"
-                    name="name"
-                    value={color.name}
-                    onChange={handleColor}
-                    className="form-control"
-         placeholder = "Enter Color here..."
-                    
-      />
-      <br /><br /><br />
-      
-      {show ? <h1 className="namee" style={{color:txtColor}}>A.R. ENGINEERINGS</h1>:""}
-      <button className='btn' onClick={handleClick}>Hide/Show </button> 
-      <button className='btn' onClick={handleChangeColor}>Change Color</button> 
-    </>
-  )
-}
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <div
+        style={{
+          width: '200px',
+          height: '200px',
+          backgroundColor: color,
+          margin: '0 auto',
+          borderRadius: '50%',
+        }}
+      ></div>
+      <p>Current color: {color}</p>
+    </div>
+  );
+};
 
 export default App;
