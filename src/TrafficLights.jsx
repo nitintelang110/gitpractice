@@ -7,7 +7,7 @@ const TrafficLights = () => {
   const [seconds, setSeconds] = useState(5); // Initial time for red
 
   useEffect(() => {
-    // Define a function to change the color based on the current state
+    // Define a function to change the color based on the current state.
     const changeColor = () => {
       if (color === 'red') {
         setColor('green');
