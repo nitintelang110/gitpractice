@@ -29,15 +29,15 @@ const TrafficLights = () => {
   }, [color, seconds]);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px',marginLeft:'100px'}}>
+    <div style={{ textAlign: 'center', marginTop: '50px',marginLeft:'50px'}}>
       
       <div
         style={{
-          width: '200px',
-          height: '200px',
+          width: '300px',
+          height: '300px',
           backgroundColor: color,
           margin: '0 auto',
-          borderRadius: '50%',
+          borderRadius: '0%',
           textAlign:'center',
         }}
       ></div>
