@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const App = () => {
   const [color, setColor] = useState('red'); // Initial color
-  const [seconds, setSeconds] = useState(10); // Initial time for red
+  const [seconds, setSeconds] = useState(5); // Initial time for red
 
   useEffect(() => {
     // Define a function to change the color based on the current state
@@ -13,10 +13,10 @@ const App = () => {
         setSeconds(5); // Green for 5 seconds
       } else if (color === 'green') {
         setColor('yellow');
-        setSeconds(15); // Yellow for 15 seconds
+        setSeconds(5); // Yellow for 5 seconds
       } else if (color === 'yellow') {
         setColor('red');
-        setSeconds(10); // Red for 10 seconds
+        setSeconds(5); // Red for 5 seconds
       }
     };
 
@@ -36,6 +36,7 @@ const App = () => {
           backgroundColor: color,
           margin: '0 auto',
           borderRadius: '50%',
+          textAlign:'center',
         }}
       ></div>
       <p>Current color: {color}</p>
