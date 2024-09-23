@@ -41,7 +41,7 @@ const TrafficLights = () => {
           textAlign:'center',
         }}
       ></div>
-      <p>Color: {color}</p>
+      <p>{color}</p>
     </div>
   );
 };
