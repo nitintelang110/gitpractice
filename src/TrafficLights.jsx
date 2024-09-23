@@ -21,7 +21,7 @@ const TrafficLights = () => {
       }
     };
 
-    // Set a timer to change the color after the specified seconds
+    // Set a timer to change the color after the specified seconds.
     const timer = setTimeout(changeColor, seconds * 1000);
 
     // Clean up the timer when the component is unmounted or when the color/seconds change
